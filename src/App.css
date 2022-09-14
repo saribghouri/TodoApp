@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(2, 2, 37);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 8.5vh;
+}
+img {
+  height: 110px;
+  width: 120px;
+  color: fff;
+  border-radius: 50%;
+}
+.text_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text_div h2 {
+  color: fff;
+}
+.input_field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+.input_feild input {
+  width: 25vw;
+  height: 5.5vh;
+  outline: none;
+  font-size: 22px;
+  text-align: center;
+  background-color: aliceblue;
+}
+.showItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  position: absolute;
+  /* top: 75px; */
+  display: flex;
+  margin-left: 228px;
+  margin-top: 5px;
+  color: rgb(87,135,246);
+}
+i {
+  cursor: pointer;
+}
+.btn_style {
+  padding: 0.4rem 0.8rem;
+  background-color: rgb(87, 135, 246);
+  outline: none;
+  border: none;
+  color: fff;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 0vh;
+  margin-left: 3vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#add {
+  margin-left: 1vw;
 }
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+.shownItems {
+  /* width: 25vw; */
+  border-radius: 5px;
+  height: 5vh;
+  font-size: 15px;
+  background-color: fff;
+  margin-right: 6vh;
+  position: relative;
+  margin-left: 1vw;
+}
+
+.shownItems:hover {
+  background-color: darkgoldenrod;
+  color: fff;
+}
+
+.btn_styl {
+  padding: 0.4rem 0.8rem;
+  background-color: rgb(87, 135, 246);
+  outline: none;
+  border: none;
+  color: fff;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 6vh;
+  margin-left: 30vw;
+}
+
+h1 {
+  margin: 1em 0 0.5em 0;
+  color: #343434;
+  font-weight: normal;
+  font-family: "Ultra", sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  text-shadow: 0 2px white, 0 3px #777;
+}
+
+.inp {
+  width: 31%;
+  height: 42px;
+  background-color: floralwhite;
+}
+
+.eachItems {
+  width: 31%;
+  background-color: azure;
+  color: black;
+  display: flex;
+  border: 1px solid;
+  margin-top: 7px;
+  margin-right: 87px;
+}
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import logo from "./image/logo.webp";
 const Todo = () => {
   const [InputVal, setInputVal] = useState("");
@@ -14,10 +14,18 @@ const Todo = () => {
   };
 
   const remove_item = (id) => {
-    const remove_items = eachItems.filter((curele, ind) => {
+    const remove_items = eachItems.filter((ind) => {
       return ind !== id;
     });
     setEachItems(remove_items);
+  };
+  const name = useRef(null);
+  const inp = () => {
+    if (!name.current.value) {
+      alert("please enter a values");
+    } else {
+      handleClick();
+    }
   };
   return (
     <div>
@@ -38,9 +46,10 @@ const Todo = () => {
           }}
           autoComplete="off"
           value={InputVal}
+          ref={name}
         />
         <div className="btnContainer">
-          <button className="btn_style" onClick={handleClick}>
+          <button className="btn_style" onClick={inp}>
             Add
           </button>
         </div>
@@ -51,16 +60,17 @@ const Todo = () => {
           <>
             <div className="showItems">
               <div className="eachItems">
-                <div className="shownItems"></div>
-                <h5>
-                  <i
-                    className="fas fa-trash main"
-                    onClick={() => {
-                      remove_item(ind);
-                    }}
-                  ></i>
-                  {curele}
-                </h5>
+                <div className="shownItems">
+                  <h5>{curele}</h5>
+                  <div>
+                    <i
+                      className="fas fa-trash main"
+                      onClick={() => {
+                        remove_item(ind);
+                      }}
+                    ></i>
+                  </div>
+                </div>
               </div>
             </div>
           </>
